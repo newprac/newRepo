@@ -1,0 +1,35 @@
+.wrap {display: flex;}
+.column {
+    border: 1px solid black;
+    height: 300px;
+    width: 300px;
+    margin: 0 10px;
+}
+.column > div {
+    width: 300px;
+    padding: 20px;
+}
+
+h3 {
+    margin: 0;
+    background-color: lightblue;
+    padding: 10px;
+}
+.layer {position: relative;}
+.layer_popup {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    cursor: move;
+}
+#startDate {
+    cursor: pointer;
+}
+#gallery_wrap {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    width: 100%;
+    height: 255px;
+    padding: 0;
+}

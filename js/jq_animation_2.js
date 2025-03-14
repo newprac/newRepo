@@ -12,7 +12,7 @@ $(function () {
       $(".btn2").removeClass("btn2").text("Slide Up");
     });
   });
-    });
+});
 
 $(function () {
   $(".btn2_1").on("click", function () {
