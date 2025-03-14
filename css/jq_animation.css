@@ -1,0 +1,81 @@
+.container {
+    display: flex;
+    gap: 10px; /* 열 사이 간격 */
+}
+.container2 {
+    display: flex;
+    gap: 10px; /* 열 사이 간격 */
+    margin-top: 20px;
+}
+
+
+.column {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    text-align: center;
+    height: 230px;
+    align-items: center;
+}
+h3 {
+    border-bottom: 1px solid black;
+    margin: 0 -20px;
+    width: 250px;
+}
+
+p {
+    font-size: 12px;
+}
+.content1 {
+    width: 200px;
+    background-color: #6ab1c7;
+}
+.flex_button{display: flex; gap: 1px;}
+
+.column3 {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    height: 230px;
+    align-items: center;
+    text-align: center;
+}
+.animate3 {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+.txt3_1{background-color: aqua;}
+.txt3_2{background-color: pink;}
+
+.column4 {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    height: 230px;
+    text-align: center;
+    align-items: center;
+}
+.animate4 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+.column4 h3 {text-align: center;}
+.column4 p { margin: 3px 0; width: 80px; text-align: center;}
+.txt4_1{background-color: aqua;}
+.txt4_2{background-color: pink;}
+.txt4_3{background-color: orange;}
+.txt4_4{background-color: green;}
+.txt4_5{background-color: gold;}
+
+.txt5 {
+    width: 50px;
+    background-color: aqua;
+}

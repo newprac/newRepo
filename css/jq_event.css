@@ -1,0 +1,64 @@
+.container {
+    display: flex;
+    gap: 10px; /* 열 사이 간격 */
+}
+.container2 {
+    display: flex;
+    gap: 10px; /* 열 사이 간격 */
+    margin-top: 20px;
+}
+
+
+.column {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    text-align: center;
+
+    height: 200px;
+    align-items: center;
+}
+h3 {
+    border-bottom: 1px solid black;
+    margin: 0 -20px;
+    width: 250px;
+}
+
+p {
+    font-size: 12px;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+.box1, .box2 {
+    border: 1px solid black;
+    width: 50%;
+    margin-top: 5px;
+    height: 150px;
+}
+.content p {
+    border: 1px solid black;
+    padding: 10px 0;
+}
+/* .wrap {
+    position: fixed;
+    left: 620px;
+    top: 300px;
+} */
+/* body{
+    height:10000px;
+    width:5000px;
+} */
+
+#rel_site {
+    margin-top: 20px;
+}
+
+.index { 
+    display: flex;
+    margin: auto;
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQuery Event Method</title>
+    <script src="./js/jquery.js"></script>
+    <link rel="stylesheet" href="./css/jq_event.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="column">
+        <h3>click</h3>
+        <p><button class="btn1">click method</button></p>
+        <p>if문으로 토글버튼</p>
+      </div>
+      <div class="column">
+        <h3>mouveover/mouseout</h3>
+        <p><button class="btn2">over/out method</button></p>
+        <p>"moustover":function(){~~}</p>
+      </div>
+      <div class="column">
+        <h3>trigger</h3>
+        <p><button class="btn3">trigger method</button></p>
+        <p>사용자의 인터렉션 없이 <br />강제 실행시 사용</p>
+      </div>
+      <div class="column">
+        <h3>off</h3>
+        <p><button class="btn4">off method</button></p>
+        <p>이벤트 핸들러 제거</p>
+      </div>
+      <div class="column">
+        <h3>ready()/on("load")</h3>
+        <p><button class="btn5">ready/on method</button></p>
+        <p id="p5"></p>
+        <img class="img1" src="https://place-hold.it/100x20" alt="" />
+      </div>
+      <div class="column">
+        <h3>dblclick</h3>
+        <p><button class="btn6">doubleclick method</button></p>
+        <p id="p6">더블클릭</p>
+      </div>
+      <div class="column">
+        <h3>hover</h3>
+        <p><button class="btn7">hover method</button></p>
+        <p id="p7">mouseover+mousetout</p>
+      </div>
+    </div>
+
+    <div class="container2">
+      <div class="column">
+        <h3>mouseout/leave</h3>
+        <div class="content">
+          <div class="box1">
+            <p>내용1</p>
+            <p>내용2</p>
+            <p>내용3</p>
+          </div>
+          <div class="box2">
+            <p>내용1</p>
+            <p>내용2</p>
+            <p>내용3</p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <h3>move</h3>
+        <p id="p9X">X: <span class="posX">0</span>px</p>
+        <p id="p9Y">Y: <span class="posY">0</span>px</p>
+      </div>
+      <div class="column">
+        <h3>scroll</h3>
+        <div class="wrap">
+          <p>scrollTop : <span class="top">0</span>px</p>
+          <p>scrollLeft : <span class="left">0</span>px</p>
+        </div>
+      </div>
+      <div class="column">
+        <h3>focus / blur</h3>
+        <form action="#">
+          <p>
+            <label for="user_id_1">ID</label>
+            <input type="text" name="user_id_1" id="user_id_1" />
+          </p>
+          <p>
+            <label for="user_pw_1">PW</label>
+            <input type="password" name="user_pw_1" id="user_pw_1" />
+          </p>
+        </form>
+      </div>
+      <div class="column">
+        <h3>focusin / focusout</h3>
+        <form action="#" id="frm_2">
+          <p>
+            <label for="user_id_2">ID</label>
+            <input type="text" name="user_id_2" id="user_id_2" />
+          </p>
+          <p>
+            <label for="user_pw_2">PW</label>
+            <input type="password" name="user_pw_2" id="user_pw_2" />
+          </p>
+        </form>
+      </div>
+      <div class="column">
+        <h3>마우스로만 접근</h3>
+        <p><button id="btn1">버튼1</button></p>
+        <p><button id="btn2">버튼2</button></p>
+        <p class="txt"></p>
+      </div>
+      <div class="column">
+        <h3>change</h3>
+        <select id="rel_site">
+          <option value="">사이트 선택</option>
+          <option value="www.google.com">구글</option>
+          <option value="www.naver.com">네이버</option>
+          <option value="www.daum.net">다음</option>
+        </select>
+        <p class="txt10">여기가 바뀜</p>
+      </div>
+    </div>
+    <div class="container2">
+      <div class="column">
+        <h3>keydown</h3>
+        <p><input type="text" name="user_id" id="user_id" /></p>
+      </div>
+      <div class="column">
+        <h3>$(this)/Index( )</h3>
+        <div class="index">
+          <ul class="menuWrap_1">
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴2</a></li>
+            <li><a href="#">메뉴3</a></li>
+          </ul>
+          <ul class="menuWrap_2">
+            <li><a href="#">메뉴4</a></li>
+            <li><a href="#">메뉴5</a></li>
+            <li><a href="#">메뉴6</a></li>
+          </ul>
+          <p class="idxNum"></p>
+        </div>
+      </div>
+      <div class="column">
+        <h3>on()에 라이브 이벤트 등록</h3>
+        <div id="wrap">
+          <p><button class="btn_1">버튼1</button></p>
+          <p><button class="btn_2">버튼2</button></p>
+        </div>
+      </div>
+      <div class="column">
+        <h3>delegate(), one()</h3>
+        <div id="wrap">
+          <p class="btn_wrap">
+            <button class="btn_111">버튼1</button>
+          </p>
+          <p><button class="btn_222">버튼2</button></p>
+        </div>
+      </div>
+      <div class="column">
+        <h3>on으로 기본과 라이브 등록</h3>
+        <div id="wrap_btn">
+          <p><button class="btn_last">버튼1</button></p>
+        </div>
+        <p>
+          <button class="del_1">버튼1 이벤트 해지</button>
+          <button class="del_2">버튼2 이벤트 해지</button>
+        </p>
+      </div>
+    </div>
+
+    <script src="./js/jq_event.js"></script>
+  </body>
+</html>
