@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQuery animation</title>
+    <link rel="stylesheet" href="./css/jq_animation.css" />
+    <script src="./js/jquery.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="column">
+        <h3>slideUp/fadeIn</h3>
+        <div class="flex_button">
+          <p><button class="btn1_1">Slide Up</button></p>
+        </div>
+        <div class="box1">
+          <div class="content1">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <h3>slideToggle/fadeTo</h3>
+        <div class="flex_button">
+          <p><button class="btn2_1">slideToggle</button></p>
+          <p><button class="btn2_2">fadeTo</button></p>
+        </div>
+        <div class="box2">
+          <div class="content1">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+        </div>
+      </div>
+      <div class="column3">
+        <h3>animate</h3>
+        <div class="animate3">
+          <div>
+            <button class="btn3_1">btn1</button>
+            <span class="txt3_1">80px이동</span>
+          </div>
+          <div>
+            <button class="btn3_2">btn2</button>
+            <span class="txt3_2">20px이동</span>
+          </div>
+          <p id="p3_1"></p>
+        </div>
+      </div>
+      <div class="column4">
+        <h3>stop/delay</h3>
+        <div class="animate4">
+          <p class="txt4_1">효과1</p>
+          <p class="txt4_2">효과2<br />delay(3000)</p>
+          <p><button class="btn4">50px 전진</button></p>
+          <p class="txt4_3">효과3</p>
+          <p class="txt4_4">효과4<br />stop</p>
+          <p class="txt4_5">효과5<br />stop(true, true)</p>
+        </div>
+      </div>
+      <div class="column">
+        <h3>queue/dequeue</h3>
+        <p class="txt5">content1</p>
+      </div>
+      <div class="column">
+        <h3>clearQueue</h3>
+        <p class="txt6_1">con1</p>
+        <p class="txt6_2">con2</p>
+      </div>
+      <div class="column">
+        <h3>hover</h3>
+        <p><button class="btn7">hover method</button></p>
+        <p id="p7">mouseover+mousetout</p>
+      </div>
+    </div>
+
+    <script src="./js/jq_animation_2.js"></script>
+  </body>
+</html>
