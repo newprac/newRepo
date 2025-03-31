@@ -1,0 +1,8 @@
+window > preferences > java > editor > content assist
+
+3번째 박스 안에 auto activation triggers for java 
+에  아래 문자열 복붙
+하면 자동완성
+
+
+.qwertyuioplkjhgfdsazxcvbnm_QWERTYUIOPLKJHGFDSAZXCVBNM
