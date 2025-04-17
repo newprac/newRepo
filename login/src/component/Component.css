@@ -1,0 +1,71 @@
+/*로그인 모달 css*/
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+.modal {
+  background-color: white;
+  width: 400px;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.modal h2 {
+  padding-left: 20px;
+}
+
+.login-input-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.login-input-form input {
+  width: 250px;
+  height: 30px;
+  padding-left: 10px;
+  font-size: 15px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+}
+
+.login-text-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.login-text-form span {
+  cursor: pointer;
+}
+
+.login-text-form span:hover,
+.modal {
+  background-color: #f0f0f0;
+  color:#333;
+}
+
+.divider {
+  margin: 20px 0;
+  border: 0;
+  border-top: 2px solid black;
+}
+  
+.separator {
+  color: black;
+}
