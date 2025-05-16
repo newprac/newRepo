@@ -74,10 +74,6 @@ const Register = () => {
 
     setErrors(newErrors);
 
-    const gohome = () => {
-      navigator("/");
-    };
-
     const isValid = Object.values(newErrors).every((error) => !error);
     if (isValid) {
       try {
@@ -110,7 +106,6 @@ const Register = () => {
           setErrors({});
           setIsIdAvailable(true);
           setIsNicknameAvailable(true);
-          gohome();
         } else {
           alert(data.error || "회원가입에 실패했습니다.");
         }

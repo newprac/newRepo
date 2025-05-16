@@ -2,10 +2,26 @@ const express = require("express");
 const mysql = require("mysql");
 const cors = require("cors");
 const bcrypt = require("bcrypt");
+const multer = require("multer");
 
 const app = express();
 const port = 5000;
 
+// Multer 설정
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, "Uploads/"); // 업로드 경로
+  },
+  filename: (req, file, cb) => {
+    const uniqueName = `${Date.now()}-${file.originalname}`;
+    cb(null, uniqueName); // 파일명 설정
+  },
+});
+
+const upload = multer({ storage });
+
+// 미들웨어
+app.use("/Uploads", express.static(path.join(__dirname, "Uploads")));
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -112,17 +128,15 @@ app.post("/login", async (req, res) => {
         .json({ message: "아이디 혹은 비밀번호를 확인해주세요." });
     }
 
-    res
-      .status(200)
-      .json({
-        message: "로그인 성공!",
-        user: {
-          id: user.id,
-          nickname: user.nickname,
-          email: user.email,
-          birthday: user.birthday,
-        },
-      });
+    res.status(200).json({
+      message: "로그인 성공!",
+      user: {
+        id: user.id,
+        nickname: user.nickname,
+        email: user.email,
+        birthday: user.birthday,
+      },
+    });
   });
 });
 
@@ -301,17 +315,38 @@ app.post("/update-profile", (req, res) => {
     }
 
     if (result.affectedRows > 0) {
-      return res
-        .status(200)
-        .json({
-          success: true,
-          message: "프로필이 성공적으로 업데이트되었습니다.",
-        });
+      return res.status(200).json({
+        success: true,
+        message: "프로필이 성공적으로 업데이트되었습니다.",
+      });
     } else {
       return res
         .status(400)
         .json({ success: false, message: "프로필 업데이트에 실패했습니다." });
     }
+  });
+});
+
+// 글쓰기 저장
+app.post("/api/posts", upload.array("files"), (req, res) => {
+  const { content } = req.body;
+  const files = req.files;
+  const filePaths = files
+    ? files.map((file) => `uploads/${file.filename}`).join(",")
+    : null;
+
+  const sql = "INSERT INTO posts (content, file_path) VALUES (?, ?)";
+  const values = [content || "", filePaths];
+
+  db.query(sql, values, (err, result) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).json({ error: "Database error" });
+    }
+    res.status(200).json({
+      message: "Post created successfully",
+      postId: result.insertId,
+    });
   });
 });
 
